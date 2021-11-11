@@ -1,7 +1,8 @@
-const app = require("express")();
+const express = require("express");
+const app = express(); 
 
 app.get("/", (req, res) => {
-   return res.send("Hello, World!");
+   res.send("Hello, World!");
 });
 
 app.listen(80, () => {

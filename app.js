@@ -5,6 +5,10 @@ app.get("/", (req, res) => {
    res.send("Hello, World!");
 });
 
+app.post("/getMessage", (req, res) => {
+  res.send(req);
+});
+
 app.listen(80, () => {
    console.log("Server Started");
 });

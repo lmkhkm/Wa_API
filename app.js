@@ -1,5 +1,6 @@
 const express = require("express");
-const app = express(); 
+const app = express();
+const message = require("./message");
 
 app.use(express.json());
 
@@ -9,7 +10,7 @@ app.get("/", (req, res) => {
 
 app.post("/getMessage", (req, res) => {
     const msgReturn = {
-        msg: req.body.msg,
+        msg: message.getReplyMessage(),
         room: req.body.room,
         sender: req.body.sender
     };

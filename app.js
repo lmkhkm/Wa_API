@@ -1,6 +1,8 @@
 const express = require("express");
 const app = express(); 
 
+app.use(express.json());
+
 app.get("/", (req, res) => {
    res.send("Hello, World!");
 });
@@ -15,7 +17,7 @@ app.post("/getMessage", (req, res) => {
 });
 
 app.listen(80, () => {
-   console.log("Server Started");
+   console.log("Server Started. Listening on 80");
 });
 
 module.exports = app;

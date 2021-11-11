@@ -6,7 +6,12 @@ app.get("/", (req, res) => {
 });
 
 app.post("/getMessage", (req, res) => {
-  res.send(req.body.msg);
+    const msgReturn = {
+        msg: req.body.msg,
+        room: req.body.room,
+        sender: req.body.sender
+    };
+    res.send(msgReturn);
 });
 
 app.listen(80, () => {

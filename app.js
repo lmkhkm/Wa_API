@@ -6,7 +6,7 @@ app.get("/", (req, res) => {
 });
 
 app.post("/getMessage", (req, res) => {
-  res.send(req);
+  res.send(req.body.msg);
 });
 
 app.listen(80, () => {

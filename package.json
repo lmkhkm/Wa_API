@@ -1,0 +1,19 @@
+{
+  "name": "wa_api",
+  "version": "1.0.0",
+  "description": "Wa... API Server",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo Hello,\\ World!"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yymin1022/Wa_API.git"
+  },
+  "author": "Dev. LR",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/yymin1022/Wa_API/issues"
+  },
+  "homepage": "https://github.com/yymin1022/Wa_API#readme"
+}

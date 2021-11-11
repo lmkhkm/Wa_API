@@ -3,3 +3,5 @@ const getReplyMessage = () => {
 
     return "TEST Message!! ABC 123 ㄱㄴㄷ"
 }
+
+module.exports = getReplyMessage;

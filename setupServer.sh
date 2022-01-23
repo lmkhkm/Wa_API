@@ -1,6 +1,6 @@
 #!/bin/bash
 
-echo "Installing Requiered Packages..."
+echo "Installing Dependecy Packages..."
 echo ""
 sudo apt install apache2 libapache2-mod-wsgi-py3 python3 python3-flask python3-pip -y
 
@@ -8,7 +8,7 @@ echo "Enabling Apache2 WSGI Module..."
 sudo a2enmod wsgi
 echo ""
 
-echo "Installing Python3 Required Modules with PIP"
+echo "Installing Python3 Dependency Modules with PIP"
 python3 -m pip install flask requests xmltodict
 echo ""
 
@@ -44,6 +44,6 @@ if [ $doStart = "y" ]
 then
     sudo /etc/init.d/apache2 start
 else
-    echo "You can start API Server with this command : /etc/init.d/apache2 start"
+    echo "You can start API Server manually with this command : /etc/init.d/apache2 start"
     echo ""
 fi

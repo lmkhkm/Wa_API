@@ -1,14 +1,26 @@
-# API 사용 가이드
+﻿# API 사용 가이드
 
 [Engligh](Guide_EN.md)<br/>
 [한국어](Guide_KO.md)
 
 ## Before Usage
 
-본 챗봇은 개발자(yymin1022)와 지인들이 평소에 주로 하는 대화 ~~헛소리~~ 를 대신 해주는 봇을 개발하고자 기획되었습니다. 챗봇의 언행이 일반인이 이해하기에는 다소 난해할 수 ~~어질어질할 수~~ 있으니 활용에 참고해주시기 바랍니다.
+본 챗봇은 개발자(yymin1022)와 지인들이 평소에 주로 하는 대화 ~~헛소리~~ 를 대신 해주는 봇을 개발하고자 기획되었습니다. 챗봇의 언행이 일반인이 이해하기에는 다소 난해할 수 ~~그리고 어질어질할 수~~ 있으니 활용에 참고하시기 바랍니다.
 
 ## Install
 
+### Setup Using Docker
+
+[DockerHub](https://hub.docker.com/repository/docker/yymin1022/wa-api)
+
+컨테이너 내부 80번 포트를 외부로 포워딩 해야합니다.
+
+```
+docker pull yymin1022/wa-api
+docker run --name wa -p 8080:80 wa-api
+```
+
+### Setup Manually
 ```
 git clone https://github.com/yymin1022/Wa_API.git
 chmod +x Wa_API/*.sh
@@ -23,7 +35,7 @@ chmod +x Wa_API/*.sh
 
 다른 플랫폼에서 이용하고자 할 경우 수정이 필요할 수 있습니다.
 
-```setupServer.sh``` 를 이용해 설치할 경우, 아래 Requirements들은 자동으로 설치 및 설정됩니다.
+```setupServer.sh``` 를 이용해 설치할 경우, 아래 Requirements이 자동으로 설치됩니다.
 
 ```
 sudo apt install apache2 libapache2-mod-wsgi-py3 python3 python3-pip python3-flask
@@ -132,4 +144,4 @@ RESULT_MSG로 반환된 메시지 내용을 채팅으로 반환할 때, ```\\m``
 
 ## Want Contribute?
 
-봇 제작에 참여하고자 하시는 경우, ```message.py``` 를 참고해 코드를 작성하시고, ```Pull Request```를 올려주시면 주기적으로 확인하여 올바른지 검토한 뒤 ```Merge``` 해드립니다!
+봇 제작에 참여하고자 하시는 경우, ```message.py``` 를 참고해 코드를 작성하시고, ```Pull Request```를 등록해주시면 주기적으로 확인하여 올바른지 검토한 뒤 ```Merge``` 해드립니다!

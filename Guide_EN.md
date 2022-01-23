@@ -1,10 +1,22 @@
-# API Usage Guide
+﻿# API Usage Guide
 
 [Engligh](Guide_EN.md)<br/>
 [한국어](Guide_KO.md)
 
 ## Install
 
+### Setup Using Docker
+
+You must Forward 80 Container Port.
+
+[DockerHub](https://hub.docker.com/repository/docker/yymin1022/wa-api)
+
+```
+docker pull yymin1022/wa-api
+docker run --name wa -p 8080:80 wa-api
+```
+
+### Setup Manually
 ```
 git clone https://github.com/yymin1022/Wa_API.git
 chmod +x Wa_API/*.sh
@@ -26,7 +38,7 @@ sudo python3 -m pip install flask requests
 
 If installed with ```setupServer.sh``` script, Apach2 service will be installed automatically.
 
-Service can be started with command one of low.
+Service can be started with command one of these.
 
 ```
 service apache2 start
